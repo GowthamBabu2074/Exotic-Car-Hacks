@@ -68,52 +68,7 @@ except NoSuchElementException:
             except NoSuchElementException:
                 highway_mpg = -1
                         
-                        
-try:
-    drivetrain = driver.find_element_by_xpath('/html/body/div[1]/div[2]/section[2]/section[2]/div[6]/div/ul/li[7]/span[1]').text
-except NoSuchElementException:
-    try:
-        drivetrain = driver.find_element_by_xpath('/html/body/div[1]/div[2]/section[2]/section[2]/div[5]/div/ul/li[7]/span[1]').text
-    except NoSuchElementException:
-        try:
-            drivetrain = driver.find_element_by_xpath('/html/body/div[1]/div[2]/section[2]/section[2]/div[4]/div/ul/li[7]/span[1]').text
-        except NoSuchElementException:
-            try:
-                drivetrain = driver.find_element_by_xpath('/html/body/div[1]/div[2]/section[2]/section[2]/div[7]/div/ul/li[7]/span[1]').text
-            except NoSuchElementException:
-                drivetrain = -1
-                        
-                        
-try:
-    gears = driver.find_element_by_xpath('/html/body/div[1]/div[2]/section[2]/section[2]/div[6]/div/ul/li[8]/span[1]').text
-except NoSuchElementException:
-    try:
-        gears = driver.find_element_by_xpath('/html/body/div[1]/div[2]/section[2]/section[2]/div[5]/div/ul/li[8]/span[1]').text
-    except NoSuchElementException:
-        try:
-            gears = driver.find_element_by_xpath('/html/body/div[1]/div[2]/section[2]/section[2]/div[7]/div/ul/li[8]/span[1]').text
-        except NoSuchElementException:
-            try:
-                gears = driver.find_element_by_xpath('/html/body/div[1]/div[2]/section[2]/section[2]/div[4]/div/ul/li[8]/span[1]').text
-            except NoSuchElementException:
-                gears = -1
-                        
-                        
-try:
-    engine = driver.find_element_by_xpath('/html/body/div[1]/div[2]/section[2]/section[2]/div[6]/div/ul/li[9]/span[1]').text
-except NoSuchElementException:
-    try:
-        engine = driver.find_element_by_xpath('/html/body/div[1]/div[2]/section[2]/section[2]/div[5]/div/ul/li[9]/span[1]').text
-    except NoSuchElementException:
-        try:
-            engine = driver.find_element_by_xpath('/html/body/div[1]/div[2]/section[2]/section[2]/div[4]/div/ul/li[9]/span[1]').text
-        except NoSuchElementException:
-            try:
-                engine = driver.find_element_by_xpath('/html/body/div[1]/div[2]/section[2]/section[2]/div[7]/div/ul/li[9]/span[1]').text
-            except NoSuchElementException:
-                engine = -1
                     
-                        
 try:
     location = driver.find_element_by_xpath('/html/body/div[1]/div[2]/section[2]/section[2]/div[1]/div[2]/div/a').text
 except NoSuchElementException:
@@ -131,9 +86,6 @@ cars.append({'car_name' : car_name,
                     'colour': colour,
                     'city_mpg':city_mpg,
                     'highway_mpg': highway_mpg,
-                    'drivetrain':drivetrain,
-                    'gears':gears,
-                    'engine':engine,
                     'location':location,
                     'contact':contact,
                     'url': ur})
